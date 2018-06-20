@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Spirax" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="button">
+        <a href="/"><button class="secondbutton">Go Back</button></a>
+    </div>
+    <div class="container">
+        <h1>Here are the awesome quotes!</h1>
+        <div class="post"> 
+            <% for (var x in quotes) {%>
+            <div class="quotes">
+                <h2>"<%= quotes[x].quote %>"</h2>
+                <h4>- <%= quotes[x].name%> at <%= quotes[x].createdAt%></h4>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    
+</body>
+</html>
